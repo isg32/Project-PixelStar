@@ -5,9 +5,10 @@
     font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
+
 nav {
     height: 80px;
-    background: #dee291;
+    background: #FFE8BC;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -29,7 +30,7 @@ nav {
 }
 
 span {
-    color: rgb(244, 92, 120);
+    color: rgb(255, 33, 74);
 }
 
 nav a {
@@ -50,7 +51,7 @@ nav a {
 }
 
 .hero {
-    background: #dee291;
+    background: #FFE8BC;
 }
 
 .hero-container {
