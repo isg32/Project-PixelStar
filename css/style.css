@@ -7,7 +7,7 @@
 
 nav {
     height: 80px;
-    background: #000032;
+    background: #dee291;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -15,7 +15,7 @@ nav {
 }
 
 .logo {
-    color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
     font-size: 1.5rem;
     font-weight: bold;
     font-style: italic;
@@ -25,12 +25,23 @@ nav {
 
 nav a {
     text-decoration: none;
-    color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
     padding: 0 1.5rem;
 }
 
+.about_nav {
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    padding: 0 1.5rem;
+    font-weight: bold;
+}
+
+.about_nav:hover {
+    text-decoration: underline;
+}
+
 .hero {
-    background: #270647;
+    background: #dee291;
 }
 
 .hero-container {
@@ -45,7 +56,7 @@ nav a {
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-    color: rgb(251, 251, 251);
+    color: rgb(0, 0, 0);
     padding: 0 2rem;
 }
 
