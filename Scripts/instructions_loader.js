@@ -78,7 +78,7 @@ document.addEventListener('DOMContentLoaded', () => {
             <p>Size: ${deviceData.response[0].size}_KB</p>
             <p>Status: ${deviceData.active ? 'Active' : 'Inactive'}</p>
             <button onclick="location.href='${deviceData.response[0].url}'" type="button">Download</button>
-            </center><form id="site-search"> <button class="nvbutton"> X </button></form>
+            </center>
             </div>
             </center>
         `;

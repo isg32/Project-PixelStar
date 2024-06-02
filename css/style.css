@@ -106,12 +106,22 @@ a {
     line-height: 1.5;
 }
 
+.nvbutton {
+    padding: 0.5rem 0.7rem;
+    font-size: 1rem;
+    border: none;
+    color: #ffffff;
+    background: #000000;
+    cursor: pointer;
+    border-radius: 50px;
+}
+
 button {
     padding: 1rem 2rem;
     font-size: 1rem;
     border: none;
     color: #ffffff;
-    background: #000;
+    background: #000000;
     cursor: pointer;
     border-radius: 50px;
 }
