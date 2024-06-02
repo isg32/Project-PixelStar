@@ -69,7 +69,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function showModal(deviceData) {
         modalContent.innerHTML = `
-        <center><div class="card">
+        <center><div class="cardforwiki">
         <center>
             <h2>${deviceData.response[0].filename}</h2>
             <p>ROM-Type: ${deviceData.response[0].romtype}</p>

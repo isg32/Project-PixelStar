@@ -81,7 +81,7 @@ a {
 .dl-container {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    height: 25vh;
+    height: 40vh;
     padding: 0rem calc((100vw - 1300px) / 2);
 }
 
@@ -173,12 +173,20 @@ button:hover {
     padding: 20px;
 }
 
+.cardforwiki {
+    background-color: #ffeed0;
+    border-radius: 50px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 25px;
+    width: 900px;
+    text-align: left;
+}
+
 .card {
     background-color: #ffeed0;
     border-radius: 50px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     padding: 25px;
-    width: 300px;
     text-align: left;
 }
 
@@ -190,4 +198,18 @@ button:hover {
 .card p {
     margin: 5px 0;
     color: #666;
+}
+
+@media (max-width: 768px) {
+
+    .cardforwiki {
+        width: 760px;
+    }
+}
+
+@media (max-width: 576px) {
+    
+    .cardforwiki {
+        width: 576px;
+    }
 }

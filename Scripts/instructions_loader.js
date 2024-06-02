@@ -10,7 +10,6 @@ document.addEventListener('DOMContentLoaded', () => {
         })
         .then(data => {
             const devices = data.devices;
-            const respoms = data.response;
             const container = document.getElementById('device-container');
 
             devices.forEach(device => {
@@ -29,20 +28,16 @@ document.addEventListener('DOMContentLoaded', () => {
                 maintainer.textContent = `Maintainer: ${device.maintainer_name}`;
                 card.appendChild(maintainer);
 
-                const status = document.createElement('p');
-                status.textContent = `Status: ${device.active ? 'Active' : 'Inactive'}`;
-                card.appendChild(status);
-
                 card.addEventListener('click', () => {
-                    fetch(`https://raw.githubusercontent.com/isg32/official_devices-pixelstar/patch-1/devices/${device.codename}.json`)
+                    fetch(`https://raw.githubusercontent.com/Project-PixelStar/official_devices/14/instructions/${device.codename}.md`)
                         .then(response => {
                             if (!response.ok) {
                                 throw new Error(`HTTP error! status: ${response.status}`);
                             }
-                            return response.json();
+                            return response.text();
                         })
-                        .then(deviceData => {
-                            showModal(deviceData);
+                        .then(markdownContent => {
+                            showModal(markdownContent);
                         })
                         .catch(error => console.error('Error fetching device details:', error));
                 });
@@ -54,7 +49,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const modal = document.getElementById('device-details');
     const modalContent = document.getElementById('device-details-content');
-    console.log(span);
     const span = document.getElementsByClassName('close')[0];
 
     span.onclick = function() {
@@ -67,20 +61,11 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    function showModal(deviceData) {
+    function showModal(markdownContent) {
         modalContent.innerHTML = `
-        <center><div class="card">
-        <center>
-            <h2>${deviceData.response[0].filename}</h2>
-            <p>ROM-Type: ${deviceData.response[0].romtype}</p>
-            <p>Version: ${deviceData.response[0].version}</p>
-            <p>Filehash: ${deviceData.response[0].filehash}</p>
-            <p>Size: ${deviceData.response[0].size}_KB</p>
-            <p>Status: ${deviceData.active ? 'Active' : 'Inactive'}</p>
-            <button onclick="location.href='${deviceData.response[0].url}'" type="button">Download</button>
-            </center>
-            </div>
-            </center>
+        <center><div>
+            <pre class="cardforwiki">${markdownContent}</pre>
+        </div></center>
         `;
         modal.style.display = 'block';
     }
