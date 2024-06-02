@@ -5,6 +5,9 @@
     font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
+body {
+    background: #FFE8BC;
+}
 
 nav {
     height: 80px;
@@ -23,6 +26,15 @@ nav {
     padding: 0 2rem;
     text-decoration: none;
 }
+
+.flogo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    font-style: italic;
+    padding: 0 2rem;
+    text-decoration: none;
+}
+
 .logo_icon {
     color: rgb(0, 0, 0);
     padding: 0.2 0.2rem;
@@ -37,6 +49,10 @@ nav a {
     text-decoration: none;
     color: rgb(0, 0, 0);
     padding: 0 1rem;
+}
+
+a {
+    color: rgb(0, 0, 0);
 }
 
 .about_nav {
@@ -54,6 +70,7 @@ nav a {
     background: #FFE8BC;
 }
 
+
 .hero-container {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -61,8 +78,15 @@ nav a {
     padding: 0rem calc((100vw - 1300px) / 2);
 }
 
+.dl-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: 25vh;
+    padding: 0rem calc((100vw - 1300px) / 2);
+}
+
 .column-left {
-    line-height: 1.6;
+    line-height: 1;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -98,10 +122,17 @@ button:hover {
 }
 
 .column-right {
+    line-height: 1;
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 0rem 2rem;
+}
+
+.column-right p {
+    margin-bottom: 2rem;
+    font-size: 1.5rem;
+    line-height: 1.5;
 }
 
 .hero-image {
@@ -113,4 +144,40 @@ button:hover {
     .hero-container{
         grid-template-columns: 1fr;
     }
+}
+
+
+#device-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    padding: 20px;
+}
+
+.containerforcard {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    padding: 20px;
+}
+
+.card {
+    background-color: #ffeed0;
+    border-radius: 50px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 25px;
+    width: 300px;
+    text-align: left;
+}
+
+.card h2 {
+    margin: 0 0 10px;
+    font-size: 1.25em;
+}
+
+.card p {
+    margin: 5px 0;
+    color: #666;
 }
